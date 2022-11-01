@@ -82,9 +82,6 @@ typedef struct {
 	// piece list
 	int pList[13][10];
 	
-	// pList[wN][0] = E1;
-	// pList[wN][1] = D4;
-	
 } S_BOARD;
 
 
@@ -104,6 +101,9 @@ extern int Sq120ToSq64[BRD_SQ_NUM];
 extern int Sq64ToSq120[64];
 extern U64 SetMask[64];
 extern U64 ClearMask[64];
+extern U64 PieceKeys[13][120];
+extern U64 SideKey;
+extern U64 CastleKeys[16];
 
 
 
@@ -120,7 +120,8 @@ extern void PrintBitBoard(U64 bb);
 extern int PopBit(U64 *bb);
 extern int CountBits(U64 b);
 
-
+// haskkeys.c
+extern U64 GeneratePosKey(const S_BOARD *pos);
 
 
 

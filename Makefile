@@ -1,2 +1,2 @@
 all:
-	gcc glass.c init.c bitboards.c -o glass
+	gcc glass.c init.c bitboards.c hashkeys.c -o glass
