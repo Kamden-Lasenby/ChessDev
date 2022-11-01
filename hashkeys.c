@@ -1,6 +1,7 @@
 // hashkeys.c
 
 #include "defs.h"
+#include "stdio.h"
 
 // function will take in a pointer to position on the board
 // function will return a special hashed key relating to the position of all pieces on the board
@@ -30,7 +31,7 @@ U64 GeneratePosKey(const S_BOARD *pos) {
 	
 	ASSERT(pos->castlePerm >= 0 && pos->castlePerm <= 15);
 	
-	finalKey ^= CastleKeys[pos->castlePerm]
+	finalKey ^= CastleKeys[pos->castlePerm];
 	
-	return finalKey
+	return finalKey;
 }

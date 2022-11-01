@@ -37,7 +37,7 @@ void InitHashKeys() {
 	}
 	SideKey = RAND_64;
 	for(index = 0; index < 16; ++index) {
-		CastleKeys[index] = RAND_64
+		CastleKeys[index] = RAND_64;
 	}
 }
 
